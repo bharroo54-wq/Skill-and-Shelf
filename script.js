@@ -279,4 +279,13 @@ function openSkillModal() {
 }
 
 
-function closeSkillModal
+function closeSkillModal() {
+
+  const modal = getElement("skillModal");
+
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.add("hidden");
+}
