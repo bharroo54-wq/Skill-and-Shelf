@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fc;
+  color: #171925;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7ee;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #6c5ce7;
+}
+
+nav {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-btn {
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #666b79;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #f0eeff;
+  color: #5d50cf;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: #6c5ce7;
+  color: #ffffff;
+  border: 0;
+}
+
+.secondary {
+  background: #ffffff;
+  color: #303545;
+  border: 1px solid #dfe2ea;
+}
+
+.outline {
+  background: #ffffff;
+  color: #303545;
+  border: 1px solid #dfe2ea;
+}
+
+.full {
+  width: 100%;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section {
+  max-width: 1150px;
+  margin: 0 auto 40px;
+  padding: 10px 5%;
+}
+
+.active-section {
+  min-height: calc(100vh - 72px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #6c5ce7;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  margin: 45px 0 25px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin: 5px 0 8px;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: #707585;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   HOME / HERO
+========================= */
+
+.hero {
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 5%;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.05;
+  margin: 12px 0 20px;
+}
+
+.hero h1 span {
+  color: #6c5ce7;
+}
+
+.lead {
+  font-size: 17px;
+  color: #646a79;
+  line-height: 1.65;
+  max-width: 650px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 16px;
+}
+
+.module-card {
+  border-radius: 22px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7ee;
+  box-shadow: 0 15px 40px rgba(20, 20, 40, 0.07);
+}
+
+.module-card h3 {
+  font-size: 26px;
+  margin: 5px 0 8px;
+}
+
+.module-card p {
+  color: #777b89;
+  line-height: 1.5;
+}
+
+.module-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.module-card button {
+  border: 0;
+  background: #f0eeff;
+  color: #5d50cf;
+  border-radius: 9px;
+  padding: 10px 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shelf-module {
+  background: #171923;
+  color: #ffffff;
+}
+
+.shelf-module p {
+  color: #b8bdca;
+}
+
+.shelf-module button {
+  background: #6c5ce7;
+  color: #ffffff;
+}
+
+
+/* =========================
+   IDEA CARDS
+========================= */
+
+.meaning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.meaning {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7ee;
+  border-radius: 18px;
+}
+
+.meaning span {
+  font-size: 11px;
+  color: #6c5ce7;
+  font-weight: 800;
+}
+
+.meaning h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.meaning p {
+  color: #666d7b;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   PANELS
+========================= */
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e5e7ee;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.search-panel {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.search-panel h2 {
+  margin-top: 0;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfe2ea;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 15px;
+  color: #202332;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px #eeeaff;
+}
+
+.message {
+  color: #6c5ce7;
+  font-size: 14px;
+ 
