@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Skill & Shelf</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+
+    <div class="brand">
+      <span>Skill</span> & Shelf
+    </div>
+
+    <nav>
+      <button class="nav-btn active" onclick="showSection('home')">
+        Home
+      </button>
+
+      <button class="nav-btn" onclick="showSection('skills')">
+        Skill Profile
+      </button>
+
+      <button class="nav-btn" onclick="showSection('books')">
+        Book Shelf
+      </button>
+    </nav>
+
+    <button class="btn outline" onclick="showSearch()">
+      Find Student
+    </button>
+
+  </header>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="section active-section">
+
+      <div class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            ONE APP • TWO WAYS TO GROW
+          </p>
+
+          <h1>
+            Show your <span>skills.</span><br>
+            Share your <span>shelf.</span>
+          </h1>
+
+          <p class="lead">
+            Skill & Shelf is a student platform that combines
+            a living skill profile with a community book shelf
+            for buying, selling, exchanging and donating books.
+          </p>
+
+          <div class="hero-buttons">
+
+            <button
+              class="btn primary"
+              onclick="showSection('skills')">
+              Explore Skills
+            </button>
+
+            <button
+              class="btn secondary"
+              onclick="showSection('books')">
+              Explore Book Shelf
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <!-- SKILL CARD -->
+          <div class="module-card skill-module">
+
+            <div class="module-icon">
+              🎓
+            </div>
+
+            <h3>
+              Skill
+            </h3>
+
+            <p>
+              Skills • Projects • Certificates • Growth
+            </p>
+
+            <button onclick="showSection('skills')">
+              Open Skill Profile →
+            </button>
+
+          </div>
+
+
+          <!-- SHELF CARD -->
+          <div class="module-card shelf-module">
+
+            <div class="module-icon">
+              📚
+            </div>
+
+            <h3>
+              Shelf
+            </h3>
+
+            <p>
+              Buy • Sell • Exchange • Donate
+            </p>
+
+            <button onclick="showSection('books')">
+              Open Book Shelf →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- IDEA -->
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          THE IDEA
+        </p>
+
+        <h2>
+          What the two parts mean
+        </h2>
+
+      </div>
+
+
+      <div class="meaning-grid">
+
+        <div class="meaning">
+
+          <span>
+            SKILL
+          </span>
+
+          <h3>
+            What you can do
+          </h3>
+
+          <p>
+            Build a profile that shows your capabilities,
+            projects, certificates, achievements and growth.
+          </p>
+
+        </div>
+
+
+        <div class="meaning">
+
+          <span>
+            SHELF
+          </span>
+
+          <h3>
+            What you can share
+          </h3>
+
+          <p>
+            Give books a second life by connecting students
+            who want to buy, sell, exchange or donate books.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SEARCH -->
+    <section
+      id="searchPanel"
+      class="panel search-panel hidden">
+
+      <h2>
+        Find a Student
+      </h2>
+
+      <p>
+        Enter a Skill ID to find a student profile.
+      </p>
+
+      <div class="search-row">
+
+        <input
+          id="studentId"
+          type="text"
+          placeholder="Example: SS26-001">
+
+        <button
+          class="btn primary"
+          onclick="searchStudent()">
+          Search
+        </button>
+
+      </div>
+
+      <p
+        id="searchMessage"
+        class="message">
+      </p>
+
+    </section>
+
+
+
+    <!-- SKILL PROFILE -->
+    <section
+      id="skills"
+      class="section">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          PART 01
+        </p>
+
+        <h2>
+          Skill Profile
+        </h2>
+
+        <p>
+          A living student identity for skills, proof and growth.
+        </p>
+
+      </div>
+
+
+      <div class="profile panel">
+
+        <!-- PROFILE HEADER -->
+        <div class="profile-head">
+
+          <div class="avatar">
+            PS
+          </div>
+
+          <div>
+
+            <span class="verified">
+              ✓ Profile verified
+            </span>
+
+            <h2>
+              Priya Sharma
+            </h2>
+
+            <p>
+              BCA • 2nd Year • Skill ID:
+              <strong>SS26-001</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SKILLS -->
+        <div class="section-title">
+
+          <h3>
+            My Skills
+          </h3>
+
+          <button
+            class="btn primary"
+            onclick="openSkillModal()">
+            + Add Skill
+          </button>
+
+        </div>
+
+
+        <div
+          id="skillGrid"
+          class="skill-grid">
+        </div>
+
+
+        <!-- PROJECTS + CERTIFICATES -->
+        <div class="two-columns">
+
+          <div>
+
+            <h3>
+              Project Shelf
+            </h3>
+
+            <div class="item">
+
+              <b>
+                Smart Waste Management
+              </b>
+
+              <small>
+               
