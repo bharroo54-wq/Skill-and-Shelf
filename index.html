@@ -3,321 +3,454 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Skill & Shelf</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="topbar">
+<header class="topbar">
+  <div class="brand"><span>Skill</span> & Shelf</div>
 
-    <div class="brand">
-      <span>Skill</span> & Shelf
-    </div>
+  <nav>
+    <button class="nav-btn active" onclick="showSection('home')">Home</button>
+    <button class="nav-btn" onclick="showSection('skills')">Skill Profile</button>
+    <button class="nav-btn" onclick="showSection('books')">Book Shelf</button>
+  </nav>
 
-    <nav>
-      <button class="nav-btn active" onclick="showSection('home')">
-        Home
-      </button>
-
-      <button class="nav-btn" onclick="showSection('skills')">
-        Skill Profile
-      </button>
-
-      <button class="nav-btn" onclick="showSection('books')">
-        Book Shelf
-      </button>
-    </nav>
-
-    <button class="btn outline" onclick="showSearch()">
-      Find Student
-    </button>
-
-  </header>
+  <button class="btn outline" onclick="showSearch()">Find Student</button>
+</header>
 
 
-  <!-- MAIN -->
-  <main>
+<main>
 
-    <!-- HOME -->
-    <section id="home" class="section active-section">
+<!-- HOME -->
+<section id="home" class="section active-section">
 
-      <div class="hero">
+  <div class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
+      <p class="eyebrow">ONE APP • TWO WAYS TO GROW</p>
 
-          <p class="eyebrow">
-            ONE APP • TWO WAYS TO GROW
-          </p>
+      <h1>
+        Show your <span>skills.</span><br>
+        Share your <span>shelf.</span>
+      </h1>
 
-          <h1>
-            Show your <span>skills.</span><br>
-            Share your <span>shelf.</span>
-          </h1>
-
-          <p class="lead">
-            Skill & Shelf is a student platform that combines
-            a living skill profile with a community book shelf
-            for buying, selling, exchanging and donating books.
-          </p>
-
-          <div class="hero-buttons">
-
-            <button
-              class="btn primary"
-              onclick="showSection('skills')">
-              Explore Skills
-            </button>
-
-            <button
-              class="btn secondary"
-              onclick="showSection('books')">
-              Explore Book Shelf
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-          <!-- SKILL CARD -->
-          <div class="module-card skill-module">
-
-            <div class="module-icon">
-              🎓
-            </div>
-
-            <h3>
-              Skill
-            </h3>
-
-            <p>
-              Skills • Projects • Certificates • Growth
-            </p>
-
-            <button onclick="showSection('skills')">
-              Open Skill Profile →
-            </button>
-
-          </div>
-
-
-          <!-- SHELF CARD -->
-          <div class="module-card shelf-module">
-
-            <div class="module-icon">
-              📚
-            </div>
-
-            <h3>
-              Shelf
-            </h3>
-
-            <p>
-              Buy • Sell • Exchange • Donate
-            </p>
-
-            <button onclick="showSection('books')">
-              Open Book Shelf →
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- IDEA -->
-      <div class="section-heading">
-
-        <p class="eyebrow">
-          THE IDEA
-        </p>
-
-        <h2>
-          What the two parts mean
-        </h2>
-
-      </div>
-
-
-      <div class="meaning-grid">
-
-        <div class="meaning">
-
-          <span>
-            SKILL
-          </span>
-
-          <h3>
-            What you can do
-          </h3>
-
-          <p>
-            Build a profile that shows your capabilities,
-            projects, certificates, achievements and growth.
-          </p>
-
-        </div>
-
-
-        <div class="meaning">
-
-          <span>
-            SHELF
-          </span>
-
-          <h3>
-            What you can share
-          </h3>
-
-          <p>
-            Give books a second life by connecting students
-            who want to buy, sell, exchange or donate books.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-<button
-  class="btn primary"
-  onclick="openSkillModal()">
-  + Add Skill
-</button>
-
-
-    <!-- SEARCH -->
-    <section
-      id="searchPanel"
-      class="panel search-panel hidden">
-
-      <h2>
-        Find a Student
-      </h2>
-
-      <p>
-        Enter a Skill ID to find a student profile.
+      <p class="lead">
+        Skill & Shelf is a student platform that combines
+        a skill profile with a community book shelf for
+        buying, selling, exchanging and donating books.
       </p>
 
-      <div class="search-row">
-
-        <input
-          id="studentId"
-          type="text"
-          placeholder="Example: SS26-001">
-
-        <button
-          class="btn primary"
-          onclick="searchStudent()">
-          Search
+      <div class="hero-buttons">
+        <button class="btn primary" onclick="showSection('skills')">
+          Explore Skills
         </button>
 
+        <button class="btn secondary" onclick="showSection('books')">
+          Explore Book Shelf
+        </button>
+      </div>
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="module-card skill-module">
+        <div class="module-icon">🎓</div>
+        <h3>Skill</h3>
+        <p>Skills • Projects • Certificates • Growth</p>
+
+        <button onclick="showSection('skills')">
+          Open Skill Profile →
+        </button>
       </div>
 
-      <p
-        id="searchMessage"
-        class="message">
+      <div class="module-card shelf-module">
+        <div class="module-icon">📚</div>
+        <h3>Shelf</h3>
+        <p>Buy • Sell • Exchange • Donate</p>
+
+        <button onclick="showSection('books')">
+          Open Book Shelf →
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="section-heading">
+    <p class="eyebrow">THE IDEA</p>
+    <h2>What the two parts mean</h2>
+  </div>
+
+
+  <div class="meaning-grid">
+
+    <div class="meaning">
+      <span>SKILL</span>
+      <h3>What you can do</h3>
+      <p>
+        Build a profile showing your skills, projects,
+        certificates, achievements and growth.
       </p>
+    </div>
 
-    </section>
+    <div class="meaning">
+      <span>SHELF</span>
+      <h3>What you can share</h3>
+      <p>
+        Give books a second life by buying, selling,
+        exchanging or donating them to other students.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
 
+<!-- SEARCH -->
+<section id="searchPanel" class="panel search-panel hidden">
 
-    <!-- SKILL PROFILE -->
-    <section
-      id="skills"
-      class="section">
+  <h2>Find a Student</h2>
 
-      <div class="section-heading">
+  <p>Enter a Skill ID to find a student profile.</p>
 
-        <p class="eyebrow">
-          PART 01
-        </p>
+  <div class="search-row">
 
-        <h2>
-          Skill Profile
-        </h2>
+    <input
+      id="studentId"
+      type="text"
+      placeholder="Example: SS26-001">
+
+    <button class="btn primary" onclick="searchStudent()">
+      Search
+    </button>
+
+  </div>
+
+  <p id="searchMessage" class="message"></p>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+
+  <div class="section-heading">
+    <p class="eyebrow">PART 01</p>
+    <h2>Skill Profile</h2>
+    <p>A living student identity for skills, proof and growth.</p>
+  </div>
+
+
+  <div class="profile panel">
+
+    <div class="profile-head">
+
+      <div class="avatar">PS</div>
+
+      <div>
+        <span class="verified">✓ Profile verified</span>
+
+        <h2>Priya Sharma</h2>
 
         <p>
-          A living student identity for skills, proof and growth.
+          BCA • 2nd Year • Skill ID:
+          <strong>SS26-001</strong>
         </p>
+      </div>
 
+    </div>
+
+
+    <div class="section-title">
+
+      <h3>My Skills</h3>
+
+      <button
+        class="btn primary"
+        onclick="openSkillModal()">
+        + Add Skill
+      </button>
+
+    </div>
+
+
+    <div id="skillGrid" class="skill-grid"></div>
+
+
+    <div class="two-columns">
+
+      <div>
+        <h3>Project Shelf</h3>
+
+        <div class="item">
+          <b>Smart Waste Management</b>
+          <small>Python + IoT • Completed</small>
+        </div>
+
+        <div class="item">
+          <b>Student Expense Tracker</b>
+          <small>HTML + JavaScript • Completed</small>
+        </div>
       </div>
 
 
-      <div class="profile panel">
+      <div>
+        <h3>Certificates</h3>
 
-        <!-- PROFILE HEADER -->
-        <div class="profile-head">
-
-          <div class="avatar">
-            PS
-          </div>
-
-          <div>
-
-            <span class="verified">
-              ✓ Profile verified
-            </span>
-
-            <h2>
-              Priya Sharma
-            </h2>
-
-            <p>
-              BCA • 2nd Year • Skill ID:
-              <strong>SS26-001</strong>
-            </p>
-
-          </div>
-
+        <div class="item">
+          <b>Python Fundamentals</b>
+          <small>2026</small>
         </div>
 
-
-        <!-- SKILLS -->
-        <div class="section-title">
-
-          <h3>
-            My Skills
-          </h3>
-
-          <button
-            class="btn primary"
-            onclick="openSkillModal()">
-            + Add Skill
-          </button>
-
+        <div class="item">
+          <b>Communication Skills</b>
+          <small>2026</small>
         </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-        <div
-          id="skillGrid"
-          class="skill-grid">
-        </div>
+<!-- BOOK SHELF -->
+<section id="books" class="section">
+
+  <div class="section-heading">
+
+    <p class="eyebrow">PART 02</p>
+
+    <h2>Book Shelf</h2>
+
+    <p>
+      Give books a second life — buy, sell, exchange
+      or donate with other students.
+    </p>
+
+  </div>
 
 
-        <!-- PROJECTS + CERTIFICATES -->
-        <div class="two-columns">
+  <div class="book-actions">
 
-          <div>
+    <button class="action-card active"
+      onclick="filterBooks('all', this)">
+      📚
+      <b>Discover</b>
+      <small>Browse books</small>
+    </button>
 
-            <h3>
-              Project Shelf
-            </h3>
+    <button class="action-card"
+      onclick="filterBooks('sell', this)">
+      🛒
+      <b>Buy</b>
+      <small>Find affordable books</small>
+    </button>
 
-            <div class="item">
+    <button class="action-card"
+      onclick="filterBooks('sell', this)">
+      💰
+      <b>Sell</b>
+      <small>List your books</small>
+    </button>
 
-              <b>
-                Smart Waste Management
-              </b>
+    <button class="action-card"
+      onclick="filterBooks('exchange', this)">
+      🔄
+      <b>Exchange</b>
+      <small>Swap with students</small>
+    </button>
 
-              <small>
+    <button class="action-card"
+      onclick="filterBooks('donate', this)">
+      ❤️
+      <b>Donate</b>
+      <small>Pass books forward</small>
+    </button>
+
+  </div>
+
+
+  <div class="book-toolbar">
+
+    <input
+      id="bookSearch"
+      type="text"
+      placeholder="Search by title, subject or author"
+      oninput="renderBooks()">
+
+    <button class="btn primary" onclick="openBookModal()">
+      + List a Book
+    </button>
+
+  </div>
+
+
+  <div id="bookGrid" class="book-grid"></div>
+
+</section>
+
+</main>
+
+
+<!-- ADD SKILL MODAL -->
+<div id="skillModal" class="modal hidden">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeSkillModal()">
+      ×
+    </button>
+
+    <h2>Add a Skill</h2>
+
+    <label>
+      Skill name
+
+      <input
+        id="skillName"
+        type="text"
+        placeholder="Example: Video Editing">
+    </label>
+
+
+    <label>
+      Category
+
+      <select id="skillCategory">
+        <option>Technical & IT</option>
+        <option>Creative</option>
+        <option>Communication</option>
+        <option>People & Social</option>
+        <option>Thinking Skills</option>
+        <option>Languages</option>
+        <option>Business</option>
+        <option>Personal Skills</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+
+    <label>
+      Level
+
+      <select id="skillLevel">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </label>
+
+
+    <button
+      class="btn primary full"
+      onclick="addSkill()">
+      Add to Shelf
+    </button>
+
+    <p id="skillMessage" class="message"></p>
+
+  </div>
+
+</div>
+
+
+<!-- ADD BOOK MODAL -->
+<div id="bookModal" class="modal hidden">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeBookModal()">
+      ×
+    </button>
+
+    <h2>List a Book</h2>
+
+    <label>
+      Book title
+
+      <input
+        id="bookTitle"
+        type="text"
+        placeholder="Example: Engineering Mathematics">
+    </label>
+
+
+    <label>
+      Subject / Author
+
+      <input
+        id="bookAuthor"
+        type="text"
+        placeholder="Example: B.Tech Mathematics">
+    </label>
+
+
+    <label>
+      Action
+
+      <select id="bookAction">
+
+        <option value="sell">Sell</option>
+
+        <option value="exchange">Exchange</option>
+
+        <option value="donate">Donate</option>
+
+      </select>
+    </label>
+
+
+    <label>
+      Price (₹)
+
+      <input
+        id="bookPrice"
+        type="number"
+        min="0"
+        value="0">
+    </label>
+
+
+    <button
+      class="btn primary full"
+      onclick="addBook()">
+      List Book
+    </button>
+
+    <p id="bookMessage" class="message"></p>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <b>Skill & Shelf</b>
+
+  <span>
+    Skill = what you can do.
+    Shelf = what you can share.
+  </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
                
